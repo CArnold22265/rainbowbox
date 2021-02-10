@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>
+rainbox
+</title>
+<meta charset="utf-8">
+<style>
+.parent{
+    width:100px;
+    height:100px;
+    background-color: gray;
+    position: absolute;
+    margin-left:100px;
+    margin-top:100px;
+
+}
+.child{
+    width:100px;
+    height: 100px;
+    background-color:red;
+    position:relative;
+    transition: transform 10s; background-color:;
+}
+.parent:hover .child {
+    animation: rainbox 5s linear;
+}
+ 
+ @keyframes rainbox {
+     0% {
+           transform:translateY(-100%);
+     }
+    
+    12.5% {
+           transform:translateY(-100%) translateX(100px);
+           background-color: orange;          
+    }
+    
+    25% {
+          transform: translateX(100px);
+          background-color: yellow;
+    }
+
+    37.5% {
+          transform: translateX(100px) translateY(100px);
+          background-color:blue
+    }
+
+    50%  {
+         transform: translateY(100px);
+         background-color:green;
+    }
+
+    62.5% {
+        transform: translateY(100px) translateX(-100px);
+        background-color: indigo;
+    }
+    75% {
+        transform: translateX(-100px);
+        background-color: violet;
+    }
+    87.5% {
+        transform: translateY(-100px) translateX(-100px);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+ }
+
+</style>
+
+<body>
+<nav class="parent">
+<nav class="child">
+
+</nav>
+</nav>
+</body>
+</html>
